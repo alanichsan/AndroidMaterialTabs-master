@@ -41,5 +41,4 @@
             android:label="@string/title_activity_custom_view_icon_text_tabs"
             android:parentActivityName=".activity.MainActivity" />
     </application>
-
 </manifest>

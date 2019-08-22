@@ -23,7 +23,7 @@ public class SegitigaActivity extends AppCompatActivity {
         toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        a = (EditText) findViewById(R.id.pa);
+        a = (EditText) findViewById(R.id.a);
         t = (EditText) findViewById(R.id.t);
         hitung = (Button) findViewById(R.id.hitung);
         hasil = (TextView) findViewById(R.id.hasil);
@@ -31,20 +31,18 @@ public class SegitigaActivity extends AppCompatActivity {
         hitung.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (a.length() == 0&&t.length() == 0) {
-                    Toast.makeText(getApplication(), " tidak boleh Kosong", Toast.LENGTH_LONG).show();
+                if (a.length() == 0 && t.length() == 0) {
+                    Toast.makeText(getApplication(), "sisi tidak boleh Kosong", Toast.LENGTH_LONG).show();
                 } else {
-                    String panjang = a.getText().toString();
-                    String lebar = t.getText().toString();
-
-                    double a = Double.parseDouble(panjang);
-                    double t = Double.parseDouble(lebar);
-
+                    String isisisi = a.getText().toString();
+                    double a = Double.parseDouble(isisisi);
+                    double t = Double.parseDouble(isisisi);
                     double Hasil = hasil(a,t);
                     String output = String.valueOf(Hasil);
                     hitung.setText(output.toString());
                 }
             }
+
 
 
             private double hasil(double a,double t) {
@@ -56,12 +54,10 @@ public class SegitigaActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (a.length() == 0) {
-                    Toast.makeText(getApplication(), " tidak boleh Kosong", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplication(), "sisi tidak boleh Kosong", Toast.LENGTH_LONG).show();
                 } else {
-                    String panjang = a.getText().toString();
-
-                    double a = Double.parseDouble(panjang);
-
+                    String isisisi = a.getText().toString();
+                    double a = Double.parseDouble(isisisi);
                     double Hasil = hasilk(a);
                     String output = String.valueOf(Hasil);
                     hitungk.setText(output.toString());
